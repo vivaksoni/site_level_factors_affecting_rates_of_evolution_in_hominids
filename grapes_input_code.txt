@@ -1,0 +1,8 @@
+#Loop through sfs files, running grapes on each. Output two main files - one results file and one for stdout (for omega results)
+for f in *.sfs; do grapes -in "$f" -out "$f".csv -model GammaZero >> "$f".txt; done
+
+#Loop through Grapes results files, extracting relevant columns, and output to results.txt
+for f in *.csv; do awk -v fn="$f" -F ',' '{if($10=="GammaZero")print substr(fn,1,length(fn)-8),$2,$3,$4,$5,$6,$7,$8,$9,$13,$14,$15,$16,$17,$18,$24,$25}' OFS='\t' "$f" >> results.txt; done
+
+#Loop through .txt results file to obtain omega results
+for f in *.txt; do grep "GammaZero" "$f" | tail -n1 | grep "\[" | awk -v fn="$f" -F '\t' '{print substr(fn,1,length(fn)-8),$2}' >> omega_results.txt; done
