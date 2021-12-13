@@ -2,7 +2,7 @@
 
 #Updated on Dec 13th, 2021
 
-This is the list of files included for the manuscript titled "Site level factors that affect the rate of adaptive evolution in humans and chimpanzees; the effect of contracting population size" by Soni et al., which can be found here - https://www.biorxiv.org/content/10.1101/2021.05.28.446098v2 . Contact vsoni@sussex.ac.uk for questions.
+This is the list of files included for the manuscript titled "Site level factors that affect the rate of adaptive evolution in humans and chimpanzees; the effect of contracting population size" by Soni et al. 2021, which can be found here - https://www.biorxiv.org/content/10.1101/2021.05.28.446098v2 . Contact vsoni@sussex.ac.uk for questions.
 
 sfs_functions.ipynb // Jupyter notebook script for creating sfs files and plotting results
 
